@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/creditcards.png" type="image/icon type">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+   
+    <title>Payment Form Example</title>
+</head>
+<body>
+    <!-- BODY FORM -->
+    <div class="container border mt-4">
+ 
+        <h1 class="bg-light text-dark p-3 custom-order-top">Payment form example</h1>
+        <!-- ALERTA -->
+        <div class="alert alert-danger" role="alert">
+            Some fields are missing
+        </div>
+        <!-- PRIMEROS CAMPOS DATOS TARJETA -->
+        <div class="row  mb-3">
+            <div class="col-md-5">
+                <label for="CreditCard" class="form-label">Card #</label>
+                <input type="number" class="form-control" id="CreditCard" placeholder="XXXXXXXXXXXXXXXX">
+            </div>
+            <div class="col-md-2">
+                <label for="CVC" class="form-label">CVC #</label>
+                <input type="number" id="CVC" class="form-control" placeholder="0000">
+            </div>
+            <div class="col-md-5">
+                <label for="Ammount" class="form-label">Amount</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text bg-grey-light">$</span>
+                    <input type="text" class="form-control" arial-label="Amount (to the nearest dollar)">
+                </div>
+            </div>
+        </div>
+        <!-- NAME & ADRESS -->
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="Name" class="form-label"> Firs Name</label>
+                <input type="text" class="form-control" id="Name">
+                </div>
+                <div class="col-md-6">
+                    <label for="LastName" class="form-label">Last Name</label>
+                    <input type="password" class="form-control" id="LastName">
+                </div>
+        </div>
+        <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-4">
+                    <label for="inputState" class="form-label">State</label>
+                    <select id="inputState" class="form-select">
+                        <option selected> Pick a state...</option>
+                      
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="inputZip" class="form-label">Postal Code</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <label for="buttons" class="mb-2">Payment Method:</label>
+
+            
+                <br>
+                <div class="btn-group btn-group-toggle bg-secondary custom-rounded:2rem" id="buttons" data-toggle="buttons" >
+                    <label class="btn">
+                        <input type="radio" name="payment_method" value="credit_card_1">
+                                               
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/20px-Mastercard-logo.svg.png" alt="Tarjeta de crédito 1">
+                       
+                    </label>
+                    <label class="btn">
+                        <input type="radio" name="payment_method" value="credit_card_2">
+                        
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/20px-Visa_Inc._logo.svg.png" alt="Tarjeta de crédito 2">
+
+                    </label>
+                    <label class="btn">
+                        <input type="radio" name="payment_method" value="credit_card_3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/20px-Visa_Inc._logo.svg.png" alt="Tarjeta de crédito 3">
+
+                    </label>
+                    <label class="btn">
+                        <input type="radio" name="payment_method" value="credit_card_4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/20px-Visa_Inc._logo.svg.png" alt="Tarjeta de crédito 4">
+
+                    </label>
+                </div>
+            </div>
+                <div class="col">
+                    <label for="Message" class="form-label">Message</label>
+                    <textarea class="form-control" id="Message" rows="3"></textarea>
+                    <p> Add any notes here.</p>
+                </div>
+        </div>
+        <nav class="navbar bg-light border-top mb-3">
+            <form class="container-fluid justify-content-start mx-2 bg-secondary-subtle">
+                <button type="button" class="btn btn-secondary ms-auto mx-2">Cancel</button>
+                <button type="button" class="btn btn-primary">Send</button>
+            </form>
+        </nav>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+</html>
